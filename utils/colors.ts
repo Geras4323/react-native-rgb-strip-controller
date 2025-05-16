@@ -1,23 +1,27 @@
+import { Command } from './commands';
+
 type Color = {
-  id: number;
+  id: Command;
   color: string;
   name?: string;
 };
 
 export const colors = [
-  { id: 11, color: '#f00', name: 'R' },
-  { id: 12, color: '#0f0', name: 'G' },
-  { id: 13, color: '#00f', name: 'B' },
-  { id: 21, color: '#ff3f00' },
-  { id: 22, color: '#00ff3f' },
-  { id: 23, color: '#3f00ff' },
-  { id: 31, color: '#ff7f00' },
-  { id: 32, color: '#00ff7f' },
-  { id: 33, color: '#7f00ff' },
-  { id: 41, color: '#ffbf00' },
-  { id: 42, color: '#00ffbf' },
-  { id: 43, color: '#bf00ff' },
-  { id: 51, color: '#ff0' },
-  { id: 52, color: '#0ff' },
-  { id: 53, color: '#f0f' },
+  { id: 'RED', color: '#f00', name: 'R' },
+  { id: 'GREEN', color: '#0f0', name: 'G' },
+  { id: 'BLUE', color: '#00f', name: 'B' },
+  { id: 'R1C1', color: '#ff3f00' },
+  { id: 'R1C2', color: '#00ff3f' },
+  { id: 'R1C3', color: '#3f00ff' },
+  { id: 'R2C1', color: '#ff7f00' },
+  { id: 'R2C2', color: '#00ff7f' },
+  { id: 'R2C3', color: '#7f00ff' },
+  { id: 'R3C1', color: '#ffbf00' },
+  { id: 'R3C2', color: '#00ffbf' },
+  { id: 'R3C3', color: '#bf00ff' },
+  { id: 'R4C1', color: '#ff0' },
+  { id: 'R4C2', color: '#0ff' },
+  { id: 'R4C3', color: '#f0f' },
 ] satisfies Color[];
+
+export const effects = ['FLASH', 'STROBE', 'FADE', 'SMOOTH'] satisfies Command[];

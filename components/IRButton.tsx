@@ -1,21 +1,15 @@
-import { PropsWithChildren } from 'react';
-import { Pressable, StyleProp, ViewStyle } from 'react-native';
+import { Pressable, PressableProps } from 'react-native';
 
-import { cn } from '@/utils/lib';
-import { WithClassName } from '@/utils/types';
+import { cn, WithClassName } from '@/utils/lib';
 
-export function IRButton({
-  className,
-  children,
-  style,
-}: WithClassName & PropsWithChildren & { style?: StyleProp<ViewStyle> }) {
+export function IRButton({ className, children, ...props }: WithClassName & PressableProps) {
   return (
     <Pressable
-      style={style}
       className={cn(
         !!className && className,
         'flex size-14 items-center justify-center rounded-full'
-      )}>
+      )}
+      {...props}>
       {children}
     </Pressable>
   );
